@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    {% include 'header.html' %}
+
+    <body>
+
+        <div class="container p-lg-5">
+            <div class="row">
+                <div class="col-lg- mx-auto d-flex">
+                    <div class="post-preview p-4">
+                            <h1 class="post-title">Mars Rover</h1>
+                            <img src="{{ url_for('static', filename='assets/img/Rover.jpg') }}" class="img-fluid post-img" alt="Rover">
+                    </div>
+                    <div class="post-preview d-flex justify-content-center p-4 flex-column">
+                        <p class="row fs-4">
+                            This project was done in conjuction with a capstone team and their mars rover project. I was there to help them out primarily with just the motors, but ultimately
+                            that ended up with me helping them with the majority of the digital side of the project.
+                        </p>
+                        <p class="row fs-4">
+                            Using PWM modulation we are able to control the speed of the motors, and due to an HC12 module we can control the rover from a distance using a simple
+                            Logitech F310 controller. 
+                        </p>
+                    </div>    
+                </div>
+                <div class="col-lg- mx-auto d-flex pt-5">
+                    <div class="post-preview p-4">
+                            <h1 class="post-title">Blog Page</h1>
+                            <img src="{{ url_for('static', filename='assets/img/Login.jpg') }}" class="img-fluid post-img" alt="Rover">
+                    </div>
+                    <div class="post-preview d-flex justify-content-center p-4 flex-column">
+                        <p class="row fs-4">
+                            This project was essentially a partially guided lab from Dr. Angela Yu's 100 days of coding in Python course. The project was to create a blog page that included
+                            the ability to view, add, edit, and comment on posts. This was done through a couple databses that kept user and post information
+                        </p>
+                        <p class="row fs-4">
+                            Users would authenticate and then be able to view the posts, and if they were the author of the post they could edit or delete it. They could also comment on any
+                            post they wanted to. All of this info was stored in an SQLite relational database.
+                        </p>
+                    </div>    
+                </div>
+                <div class="col-lg- mx-auto d-flex pt-5">
+                    <div class="post-preview p-4">
+                            <h1 class="post-title">LED Pong</h1>
+                            <img src="{{ url_for('static', filename='assets/img/Pong.jpg') }}" class="img-fluid post-img" alt="Rover">
+                    </div>
+                    <div class="post-preview d-flex justify-content-center p-4 flex-column">
+                        <p class="row fs-4">
+                            This was a final project for my digital circuits class, and was a version of pong that you could play on an LED strip.
+                        </p>
+                        <p class="row fs-4">
+                            To create this, I used an FPGA and an ADAFruit LED light strip. I learned a lot about data transmission, working with hardware, and it's where I first 
+                            got my my love for microcontrollers and similar devices.
+                        </p>
+                    </div>    
+                </div>
+                <div class="col-lg- mx-auto d-flex pt-5">
+                    <div class="post-preview p-4">
+                            <h1 class="post-title">Zillow Scraper</h1>
+                            <img src="{{ url_for('static', filename='assets/img/Zillow.jpg') }}" class="img-fluid post-img" alt="Rover">
+                    </div>
+                    <div class="post-preview d-flex justify-content-center p-4 flex-column">
+                        <p class="row fs-4">
+                            This project was another one of the guided lab from Dr. Angela Yu's 100 days of coding in Python course. The project was to create a Python script that would
+                            scrape a Zillow page for the basic information and then put that information into a google sheet.
+                        </p>
+                        <p class="row fs-4">
+                            The increase the use I decided to use the direct Google Sheets API rather than the API Sheetly. This allowed me to have more hands on experience with the 
+                            interacting with Google products.
+                        </p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    {% include 'footer.html' %}
+
+</html>

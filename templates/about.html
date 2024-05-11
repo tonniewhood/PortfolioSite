@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include 'header.html' %}
+
+    <body id="page-top">
+        <!-- About-->
+        <section class="content-section bg-tertiary text-primary text-center" id="services">
+            <div class="container d-flex justify-content-center">
+                <div class="d-flex flex-column">
+                    <div class="row container px-4 px-lg-5 d-flex about-me-flex justify-content-center align-items-center">
+                        <img class="img-fluid d-flex w-35 usu-png p-4" src="{{ url_for('static', filename='assets/img/USU.png')}}" alt="Picture of Me" />
+                        <div class="content-section-heading text-center p-4">
+                            <h2 class="text-secondary">About Me</h2>
+                            <p class="fs-4">
+                                Hey! Glad you could make it. I'd like to take a moment to introduce myself.
+                            </p>
+                            <p class="fs-4">
+                                My name is <strong>Tony</strong> (or Anthony of you're feeling formal). I'm a computer engineering student up at Utah State University.
+                            </p>
+                            <p class="fs-4">
+                                I got my start in computers way back in 8th grade with a competition to learn JavaScript. I didn't really do much with it then, but I really started to
+                                pick things up in collge. One of my first classes was an intro to programming in C. That's where I really got my start. I've been learning all kinds of things
+                                since then. I've since picked up C++, Python, Java, more JavaScript, HTML and CSS, a bit of SQL, and some odds and ends like Go and Rust. I really enjoy getting to try
+                                new things and learn new stuff. As mentioned I'm currently trying to learn AI and think it's great! The complex problems that AI can solve never cease to amaze me.
+                            </p>
+                            <p class="fs-4">
+                                As for what I do now, I'm looking to get into Python development. Whether thats web or AI I'm not picky. Ideally I'd like to get a part time job while I finish up my degree,
+                                but I'm open to freelance work or even trying to make a full time job work. I'm a quick learner, so whatever we decide on I'll find a way to make it work.
+                            </p>
+                            <p class="fs-4">
+                                If you're interested in working with me, feel free to reach out. I'm always looking for new opportunities to learn and grow. As for the rest of my page, feel free to check 
+                                out a couple of my projects. I know a lot of this is really small scale, but I'm getting there! Thanks again for stopping by!
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+
+        {% include 'footer.html' %}
+
+    </body>
+</html>
