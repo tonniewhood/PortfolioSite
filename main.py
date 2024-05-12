@@ -40,18 +40,22 @@ def contact_page():
     if form.validate_on_submit():
 
         # Send email here
-        with smtplib.SMTP('smtp.gmail.com') as connection:
-            connection.starttls()
-            connection.login(user=os.environ.get('SENDER_EMAIL'), password=os.environ.get('SENDER_PASSWORD'))
-            connection.sendmail(from_addr=form.email.data,
-                                to_addrs=os.environ.get('RECEIVER_EMAIL'),
-                                msg=f"Subject:New Message from site\n\n"
-                                    f"Name: {form.name.data}\n"
-                                    f"Email: {form.email.data}\n"
-                                    f"Message: {form.message.data}")
+        try:
+            with smtplib.SMTP('smtp.gmail.com') as connection:
+                connection.starttls()
+                connection.login(user=os.environ.get('SENDER_EMAIL'), password=os.environ.get('SENDER_PASSWORD'))
+                connection.sendmail(from_addr=form.email.data,
+                                    to_addrs=os.environ.get('RECEIVER_EMAIL'),
+                                    msg=f"Subject:New Message from site\n\n"
+                                        f"Name: {form.name.data}\n"
+                                        f"Email: {form.email.data}\n"
+                                        f"Message: {form.message.data}")
 
-        form = ContactForm()
-        flash('Message sent successfully!', 'success')
+            form = ContactForm()
+            flash('Message sent successfully!', 'success')
+        except Exception as e:
+            print(e)
+            flash('Message was not sent, please try again later.', 'danger')
 
     return render_template('contact.html', form=form)
 
